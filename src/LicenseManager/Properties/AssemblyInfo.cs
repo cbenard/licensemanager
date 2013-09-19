@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("LicenseManager")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("License Manager")]
+[assembly: AssemblyDescription("Simple licensing system for .Net apps")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LicenseManager")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCompany("Chris Benard")]
+[assembly: AssemblyProduct("License Manager")]
+[assembly: AssemblyCopyright("Copyright © 2013 Chris Benard")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
