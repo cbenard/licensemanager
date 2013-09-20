@@ -43,6 +43,7 @@
             this.txtLicense = new System.Windows.Forms.TextBox();
             this.btnCopy = new System.Windows.Forms.Button();
             this.validateLicenseToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnSave = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -69,14 +70,14 @@
             // newKeypairToolStripMenuItem
             // 
             this.newKeypairToolStripMenuItem.Name = "newKeypairToolStripMenuItem";
-            this.newKeypairToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.newKeypairToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.newKeypairToolStripMenuItem.Text = "New &Keypair";
             this.newKeypairToolStripMenuItem.Click += new System.EventHandler(this.newKeypairToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
             this.exitToolStripMenuItem.Text = "E&xit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -188,12 +189,24 @@
             this.validateLicenseToolStripMenuItem.Text = "&Validate License";
             this.validateLicenseToolStripMenuItem.Click += new System.EventHandler(this.validateLicenseToolStripMenuItem_Click);
             // 
+            // btnSave
+            // 
+            this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSave.Location = new System.Drawing.Point(471, 321);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 9;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // MainForm
             // 
             this.AcceptButton = this.btnCreateLicense;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(558, 356);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCopy);
             this.Controls.Add(this.btnCreateLicense);
             this.Controls.Add(this.label4);
@@ -232,6 +245,7 @@
         private System.Windows.Forms.TextBox txtLicense;
         private System.Windows.Forms.Button btnCopy;
         private System.Windows.Forms.ToolStripMenuItem validateLicenseToolStripMenuItem;
+        private System.Windows.Forms.Button btnSave;
     }
 }
 

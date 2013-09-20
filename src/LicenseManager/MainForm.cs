@@ -83,5 +83,30 @@ namespace LicenseManager
             LicenseValidatorForm form = new LicenseValidatorForm();
             form.ShowDialog();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            DateTime? expiration = null;
+            if (!String.IsNullOrWhiteSpace(txtExpiration.Text))
+            {
+                expiration = DateTime.Parse(txtExpiration.Text);
+            }
+
+            var sfd = new SaveFileDialog();
+            sfd.Title = "License File";
+            sfd.FileName = String.Format("license-{0}-{1}.xml",
+                txtProduct.Text,
+                expiration.HasValue ? expiration.Value.ToString("yyyyMMdd-HHmmss") : "Never-Expires");
+            sfd.SupportMultiDottedExtensions = true;
+            sfd.ValidateNames = true;
+            sfd.Filter = "XML Files (*.xml)|*.xml|All Files (*.*)|*.*";
+
+            DialogResult result = sfd.ShowDialog();
+
+            if (result == System.Windows.Forms.DialogResult.OK)
+            {
+                File.WriteAllText(sfd.FileName, txtLicense.Text);
+            }
+        }
     }
 }
